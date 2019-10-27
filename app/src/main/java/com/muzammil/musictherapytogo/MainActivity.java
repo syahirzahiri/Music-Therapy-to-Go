@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -52,6 +53,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mediaPlayer = MediaPlayer.create(this, R.raw.ignite);
 
+        getWindow().setSoftInputMode(
+
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+
+        );
+
 
 
 
@@ -83,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String mFinal = dataSnapshot.child("final").getValue().toString();
                 final_txt.setText(mFinal);
+                showResult();
             }
 
             @Override
@@ -93,7 +101,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showResult(){
-        startActivity(new Intent(MainActivity.this, Result.class));
+
+        String finalResult = calculateResult();
+
+        Intent toResult = new Intent(MainActivity.this, Result.class);
+        toResult.putExtra("result",finalResult);
+        startActivity(toResult);
+    }
+
+    private String calculateResult(){
+
+        float initial_reading = Float.parseFloat(initial_txt.getText().toString());
+        float final_reading = Float.parseFloat(final_txt.getText().toString());
+
+        float calc = ((final_reading - initial_reading)/final_reading)*100;
+        String result = String.format("%.02f", calc);
+
+        return result;
     }
 
 
@@ -106,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.button_get_final:{
                 getFinal();
-                showResult();
+//                showResult();
                 break;
             }
             case R.id.button_start:{
