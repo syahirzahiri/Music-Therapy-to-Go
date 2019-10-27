@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_get_reading.setOnClickListener(this);
         btn_get_final = findViewById(R.id.button_get_final);
         btn_get_final.setOnClickListener(this);
+        btn_insight = findViewById(R.id.button_insight);
+        btn_insight.setOnClickListener(this);
 
         btn_play = findViewById(R.id.button_start);
         btn_play.setOnClickListener(this);
@@ -130,7 +132,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.button_get_final:{
                 getFinal();
-//                showResult();
                 break;
             }
             case R.id.button_start:{
@@ -145,6 +146,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.button_stop:{
                 mediaPlayer.pause();
+                break;
+            }
+            case R.id.button_insight:{
+                startActivity(new Intent(MainActivity.this,Insight.class));
+                break;
+            }
+            case R.id.button_about:{
+                startActivity(new Intent(MainActivity.this,About.class));
+                break;
             }
         }
     }

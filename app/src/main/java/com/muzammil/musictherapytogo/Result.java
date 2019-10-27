@@ -9,6 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Result extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn_new_session;
@@ -24,7 +31,15 @@ public class Result extends AppCompatActivity implements View.OnClickListener {
 
         result_txt = findViewById(R.id.result_text);
         String newResult = getIntent().getStringExtra("result");
-        result_txt.setText("You have reduced " + newResult + "% of your stress!");
+        Float resultval = Float.parseFloat(newResult);
+
+        if(resultval > 0){
+            result_txt.setText("You have reduced " + newResult + "% of your stress!");
+            addInsight(newResult);
+        }else{
+            result_txt.setText("No stress has been reduced");
+            addInsight("0.00");
+        }
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -35,6 +50,18 @@ public class Result extends AppCompatActivity implements View.OnClickListener {
         getWindow().setLayout((int)(width*.8),(int)(height*.6));
 
     }
+
+    private void addInsight(String newResult){
+
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        String key = ref.push().getKey(); // this will create a new unique key
+        Map<String, Object> value = new HashMap<>();
+        value.put("value", newResult);
+        value.put("timestamp", ServerValue.TIMESTAMP);
+        ref.child("insight").child(key).setValue(value);
+
+    }
+
 
     @Override
     public void onClick(View v) {
