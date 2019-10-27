@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "141798821562",
+    "firebase_url": "https://musictherapytogo-571c4.firebaseio.com",
+    "project_id": "musictherapytogo-571c4",
+    "storage_bucket": "musictherapytogo-571c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141798821562:android:370ba6f52d538d22c8fc83",
+        "android_client_info": {
+          "package_name": "com.muzammil.musictherapytogo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141798821562-5snc6nf10oj9i8g3th53590jh2bk1o0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdmds-GBWGVLJRtA1AeeslXuqLO7KnJ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141798821562-5snc6nf10oj9i8g3th53590jh2bk1o0d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
