@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_main_page = findViewById(R.id.button_main);
         btn_insight = findViewById(R.id.button_insight);
         btn_about = findViewById(R.id.button_about);
+        btn_about.setOnClickListener(this);
 
         btn_get_reading = findViewById(R.id.button_get_init);
         btn_get_reading.setOnClickListener(this);
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initial_txt = findViewById(R.id.initial_reading);
         final_txt = findViewById(R.id.final_reading);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.ignite);
+        mediaPlayer = MediaPlayer.create(this, R.raw.boing);
 
         getWindow().setSoftInputMode(
 

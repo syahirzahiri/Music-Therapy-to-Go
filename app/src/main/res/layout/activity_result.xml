@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EE90B0"
+    android:background="#8DFF5722"
     tools:context=".Result">
 
     <LinearLayout
@@ -34,7 +34,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:text="NEW SESSION" />
+            android:background="#FFFFFF"
+            android:text="NEW SESSION"
+            android:textColor="#FF5722" />
 
 
     </LinearLayout>

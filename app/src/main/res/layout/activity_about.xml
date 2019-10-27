@@ -6,4 +6,143 @@
     android:layout_height="match_parent"
     tools:context=".About">
 
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_main_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Main Page" />
+
+                <Button
+                    android:id="@+id/button_insight_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Insights" />
+
+                <Button
+                    android:id="@+id/button_about_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FF5722"
+                    android:textColor="#FFFFFF"
+                    android:text="About" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="What is Music Therapy?"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Music therapy is the use of music to address the physical, emotional, cognitive, and social needs of a group or individual. It employs a variety of activities, such as listening to melodies, playing an instrument, drumming, writing songs, and guided imagery. Music therapy is appropriate for people of all ages, whether they are virtuosos or tone deaf, struggling with illnesses or totally healthy."
+                android:textAlignment="textStart"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Music therapy touches all aspects of the mind, body, brain and behavior. Music can provide a distraction for the mind, it can slow the rhythms of the body, and it can alter our mood, which in turn can influence behavior."
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Receptive Music Therapy "
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Receptive music therapy is listening to music – live or recorded – and responds to the experience silently, verbally, or via another modality. The listening experience is typically focused on physical, emotional, intellectual, aesthetic, or spiritual aspects. User’s responses are designed according to the therapeutic purpose of the experience. It can be used to relax or stimulate a particulate emotional and physical response. "
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Why Is Heart Rate Variability an Important Measure?"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Why track HRV? We track HRV because we want to measure “healthy irregularities”. The type of variability indicated by HRV is perfectly normal and desirable. HRV tends to be higher when you’re fit and healthy, but how high is high depends on the individual."
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Music Therapy to Go"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Music Therapy to Go is an application solution that provide music therapy through music relaxation. Music selected and played with the intention of creating a relaxing and calming experience; music is often accompanied by the therapist softly talking through a calming imagery, connecting their bodies and minds."
+                android:textAlignment="textStart"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MTTG comes with an HRV tracker hardware that enable high accuracy reading for Heart Rate Variability (HRV). The sensor used for the tracker is photoplethysmography (PPG), which tracked the blood volume pulse signal optically. Optical measurement is based on the absorption of certain wavelengths of light when reflected towards blood veins."
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:text="In MTTG, the HRV indicates the variation in your heartbeats within the timeframe of 5 minutes. There are different ways to calculate HRV, but MTTG utilizes SDNN (Standard Deviation of NN intervals)."
+                android:textColor="#000000" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

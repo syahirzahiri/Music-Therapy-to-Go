@@ -37,7 +37,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#32CD32"
+                    android:background="#FF5722"
+                    android:textColor="#FFFFFF"
                     android:text="Insights" />
 
                 <Button
@@ -52,6 +53,8 @@
                 android:id="@+id/insightLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
                 android:orientation="vertical" />
 
         </LinearLayout>

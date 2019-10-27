@@ -54,7 +54,7 @@ public class Result extends AppCompatActivity implements View.OnClickListener {
     private void addInsight(String newResult){
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-        String key = ref.push().getKey(); // this will create a new unique key
+        String key = ref.push().getKey();
         Map<String, Object> value = new HashMap<>();
         value.put("value", newResult);
         value.put("timestamp", ServerValue.TIMESTAMP);

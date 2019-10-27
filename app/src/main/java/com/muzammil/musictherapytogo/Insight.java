@@ -86,7 +86,7 @@ public class Insight extends AppCompatActivity implements View.OnClickListener {
         parentName.setText(date);
 
         TextView childName = myLayout.findViewById(R.id.insightValue);
-        childName.setText("Stress reduced: " + result);
+        childName.setText("Stress reduced: " + result +"%");
 
         mainLayout.addView(myLayout);
     }
