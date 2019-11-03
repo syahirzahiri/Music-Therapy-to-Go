@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initial_txt = findViewById(R.id.initial_reading);
         final_txt = findViewById(R.id.final_reading);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.boing);
+//        mediaPlayer = MediaPlayer.create(this, R.raw.boing);
 
         getWindow().setSoftInputMode(
 
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String mInitial = dataSnapshot.child("initial").getValue().toString();
+                changeMusic(mInitial);
                 initial_txt.setText(mInitial);
                 btn_get_final.setVisibility(View.VISIBLE);
             }
@@ -83,6 +84,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
+
+    }
+
+    private void changeMusic(String InitialValue){
+
+        int valueInit = Integer.parseInt(InitialValue);
+
+        if(valueInit < 40){
+            mediaPlayer = MediaPlayer.create(this, R.raw.music1);
+        }else if(valueInit >= 40 && valueInit < 50){
+            mediaPlayer = MediaPlayer.create(this, R.raw.music2);
+        }else if(valueInit >= 50 && valueInit < 60){
+            mediaPlayer = MediaPlayer.create(this, R.raw.music3);
+        }else{
+            mediaPlayer = MediaPlayer.create(this, R.raw.music4);
+        }
 
     }
 
